@@ -59,6 +59,20 @@ ul.sidebar {
   background-color: #1e1e1e;
 }
 
+.button-search {
+  color:white;
+  background-color: #113fbe;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.dark-mode .button-search {
+  color:white;
+  background-color: #113fbe;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
 .sidebar {
   position: fixed;
   top: 80px; /* abaixo da navbar */
@@ -83,13 +97,13 @@ ul.sidebar li a {
 }
 
 ul.sidebar li a.active {
-  background-color: #c9c9c9;
-  color: #005eda;
+  background-color: #2a75d7;
+  color: white;
 }
 
 .dark-mode ul.sidebar li a.active {
-  background-color: #333;
-  color: #005eda;
+  background-color: #2a75d7;
+  color: white;
 }
 
 ul.sidebar li a:hover:not(.active) {
@@ -100,6 +114,11 @@ ul.sidebar li a:hover:not(.active) {
 .dark-mode ul.sidebar li a:hover:not(.active) {
   background-color: #444;
   color: #ffffff;
+}
+
+main {
+  width: 100%;
+  height:100%;
 }
 
 /* Main content */
@@ -338,21 +357,31 @@ input.form-control {
 }
   
 
-#exportacao-page .flex-container > div {
+#comparacao-page .flex-container > div {
   width: 40%;
   height: 70px;
   margin: 20px;
   font-size: clamp(14px, 2.5vw, 18px);
 }
 
-#exportacao-page .flex-container h1 {
+#comparacao-page .flex-container h1 {
   font-size: 1.2rem; /* ou 16px */
 }
 
-#exportacao-page .flex-container h2 {
+#comparacao-page .flex-container h2 {
   font-size: 1rem; /* ou 14px */
 }
 
+.graf-comparacao {
+  width: 60%;
+  height: auto; /* better to keep aspect ratio */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45); 
+}
+
+.custom-offset {
+  margin-left: 200px;
+}
 
 
 
@@ -428,3 +457,19 @@ margin: auto 50px auto 250px;
   font-size: 1rem;
 }
 
+
+.texto-comparacao {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 15px;
+  }
+
+#comparacao-page .flex-container h1 {
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+#comparacao-page .flex-container h2 {
+  font-size: 1rem;
+}
