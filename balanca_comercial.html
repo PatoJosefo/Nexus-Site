@@ -14,127 +14,130 @@
 </head>
 
 <body id="balanca-comercial-page"></body>
+  <main>
 
-  <nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-gradient">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-      <img src="images/NEXUS.svg" alt="Nexus Logo" class="nexus-logo">
-    </a>    
-    <div class="d-flex ms-auto align-items-center gap-5">
-      <form class="d-flex align-items-center">
-        <div class="input-group rounded-input-group">
-          <span class="input-group-text search-icon">🔍︎</span>
-          <input class="form-control rounded-end" type="text" placeholder="Buscar">
+      <nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-gradient">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="./images/NEXUS.svg" alt="Nexus Logo" class="nexus-logo">
+        </a>    
+        <div class="d-flex ms-auto align-items-center gap-5">
+          <form class="d-flex align-items-center">
+            <div class="input-group rounded-input-group">
+              <span class="input-group-text search-icon">🔍︎</span>
+              <input class="form-control rounded-end" type="text" placeholder="Procurar">
+            </div>
+            <button class="button-search" type="button">Buscar</button>
+          </form>
+
+          <button onclick="myFunction()">☀︎/⏾</button>
         </div>
-        <button class="btn btn-primary ms-2" type="button">Buscar</button>
-      </form>
 
-      <button onclick="myFunction()">☀︎/⏾</button>
-    </div>
-
-    <script>
-      // Função que aplica o tema salvo no localStorage sem animação
-      window.addEventListener("DOMContentLoaded", () => {
-        // Temporariamente desativa transições
-        document.documentElement.classList.add("disable-transitions");
-    
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "dark") {
-          document.body.classList.add("dark-mode");
-        }
-    
-        // Reativa transições depois de um pequeno delay
-        setTimeout(() => {
-          document.documentElement.classList.remove("disable-transitions");
-        }, 100); // Tempo suficiente para evitar a animação indesejada
-      });
-    
-      // Função para alternar tema com transição
-      function myFunction() {
-        const isDark = document.body.classList.toggle("dark-mode");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-      }
-    </script>
-    
-  </div>
-  </nav>
-
-
-  <!-- Sidebar -->
-  <div>
-    <ul class="sidebar">
-     <li><a href="5maiores.html">5 Maiores</a></li>
-     <li><a href="municipios.html">Municípios</a></li>
-     <li><a href="variacao.html">Variação Sazonal</a></li>
-     <li><a href="exportacao.html">Exportação</a></li>
-     <li><a href="mapeamento.html">Mapeamento</a></li>
-     <li><a href="">Balança Comercial</a></li>
-   </ul>
-   </div>
-
-  <!-- Page content -->
-  <div class="main-content">
-    <div class="dropdown-container">
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          EXPORTAÇÃO
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Agropecuária</a></li>
-          <li><a class="dropdown-item" href="#"> Indústria Extrativa</a></li>
-          <li><a class="dropdown-item" href="#">Indústria de Transformação</a></li>
-        </ul>
+        <script>
+          // Função que aplica o tema salvo no localStorage sem animação
+          window.addEventListener("DOMContentLoaded", () => {
+            // Temporariamente desativa transições
+            document.documentElement.classList.add("disable-transitions");
+        
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+              document.body.classList.add("dark-mode");
+            }
+        
+            // Reativa transições depois de um pequeno delay
+            setTimeout(() => {
+              document.documentElement.classList.remove("disable-transitions");
+            }, 100); // Tempo suficiente para evitar a animação indesejada
+          });
+        
+          // Função para alternar tema com transição
+          function myFunction() {
+            const isDark = document.body.classList.toggle("dark-mode");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+          }
+        </script>
+        
       </div>
-    
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          IMPORTAÇÃO
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Agropecuária</a></li>
-          <li><a class="dropdown-item" href="#"> Indústria Extrativa</a></li>
-          <li><a class="dropdown-item" href="#">Indústria de Transformação</a></li>
-        </ul>
-      </div>
-    
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          MUNICÍPIO
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">São José dos Campos</a></li>
-          <li><a class="dropdown-item" href="#">Jacareí</a></li>
-          <li><a class="dropdown-item" href="#">São Paulo</a></li>
-          <li><a class="dropdown-item" href="#">Guarulhos</a></li>
-          <li><a class="dropdown-item" href="#">Campinas</a></li>
-          <li><a class="dropdown-item" href="#">São Bernardo do Campo</a></li>
-          <li><a class="dropdown-item" href="#">Santo André</a></li>
-          <li><a class="dropdown-item" href="#">Osasco</a></li>
-          <li><a class="dropdown-item" href="#">Sorocaba</a></li>
-          <li><a class="dropdown-item" href="#">Ribeirão Preto</a></li>
-        </ul>
-      </div>
-    </div>
+      </nav>
 
-    <div class="flex-container">
-      <!-- Box 1 -->
+
+      <!-- Sidebar -->
       <div>
-        <h1>FOB</h1>
-        <h2>R$ 2,5 Bi</h2>
+        <ul class="sidebar">
+        <li><a href="index.html">5 Maiores</a></li>
+        <li><a href="municipios.html">Municípios</a></li>
+        <li><a href="variacao.html">Variação Sazonal</a></li>
+        <li><a href="comparacao-municipios.html">Comparação de Municípios</a></li>
+        <li><a href="mapeamento.html">Mapeamento</a></li>
+        <li><a class="active" href="">Balança Comercial</a></li>
+      </ul>
       </div>
-      <!-- Box 2 -->
-      <div>
-        <h1>Kg Líquido</h1>
-        <h2>R$ 1,5 Bi</h2>      
-      </div>
-      <!-- Box 3 -->
-      <div>
-        <h1>Val Agregado</h1>
-        <h2>R$ 5,5 Bi</h2>
-      </div>  
-    </div>
 
-    </div>
-  </div>
+      <!-- Page content -->
+      <div class="main-content">
+        <div class="dropdown-container">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              EXPORTAÇÃO
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Agropecuária</a></li>
+              <li><a class="dropdown-item" href="#"> Indústria Extrativa</a></li>
+              <li><a class="dropdown-item" href="#">Indústria de Transformação</a></li>
+            </ul>
+          </div>
+        
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              IMPORTAÇÃO
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Agropecuária</a></li>
+              <li><a class="dropdown-item" href="#"> Indústria Extrativa</a></li>
+              <li><a class="dropdown-item" href="#">Indústria de Transformação</a></li>
+            </ul>
+          </div>
+        
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              MUNICÍPIO
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">São José dos Campos</a></li>
+              <li><a class="dropdown-item" href="#">Jacareí</a></li>
+              <li><a class="dropdown-item" href="#">São Paulo</a></li>
+              <li><a class="dropdown-item" href="#">Guarulhos</a></li>
+              <li><a class="dropdown-item" href="#">Campinas</a></li>
+              <li><a class="dropdown-item" href="#">São Bernardo do Campo</a></li>
+              <li><a class="dropdown-item" href="#">Santo André</a></li>
+              <li><a class="dropdown-item" href="#">Osasco</a></li>
+              <li><a class="dropdown-item" href="#">Sorocaba</a></li>
+              <li><a class="dropdown-item" href="#">Ribeirão Preto</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex-container">
+          <!-- Box 1 -->
+          <div>
+            <h1>FOB</h1>
+            <h2>R$ 2,5 Bi</h2>
+          </div>
+          <!-- Box 2 -->
+          <div>
+            <h1>Kg Líquido</h1>
+            <h2>R$ 1,5 Bi</h2>      
+          </div>
+          <!-- Box 3 -->
+          <div>
+            <h1>Val Agregado</h1>
+            <h2>R$ 5,5 Bi</h2>
+          </div>  
+        </div>
+
+        </div>
+      </div>
+  </main>
+
 </body>
 </html>
