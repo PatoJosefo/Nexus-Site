@@ -15,92 +15,94 @@
 </head>
 
 <body id="variacao-page">
+  <main>
 
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-gradient">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <img src="images/NEXUS.svg" alt="Nexus Logo" class="nexus-logo">
-      </a>    
-      <div class="d-flex ms-auto align-items-center gap-5">
-        <form class="d-flex align-items-center">
-          <div class="input-group rounded-input-group">
-            <span class="input-group-text search-icon">🔍︎</span>
-            <input class="form-control rounded-end" type="text" placeholder="Buscar">
-          </div>
-          <button class="btn btn-primary ms-2" type="button">Buscar</button>
-        </form>
+      <nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-gradient">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="./images/NEXUS.svg" alt="Nexus Logo" class="nexus-logo">
+        </a>    
+        <div class="d-flex ms-auto align-items-center gap-5">
+          <form class="d-flex align-items-center">
+            <div class="input-group rounded-input-group">
+              <span class="input-group-text search-icon">🔍︎</span>
+              <input class="form-control rounded-end" type="text" placeholder="Procurar">
+            </div>
+            <button class="button-search" type="button">Buscar</button>
+          </form>
 
-        <button onclick="myFunction()">☀︎/⏾</button>
+          <button onclick="myFunction()">☀︎/⏾</button>
+        </div>
+
+        <script>
+          window.addEventListener("DOMContentLoaded", () => {
+            document.documentElement.classList.add("disable-transitions");
+        
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "dark") {
+              document.body.classList.add("dark-mode");
+            }
+        
+            setTimeout(() => {
+              document.documentElement.classList.remove("disable-transitions");
+            }, 100);
+          });
+
+          function myFunction() {
+            const isDark = document.body.classList.toggle("dark-mode");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+          }
+        </script>
+      </div>
+      </nav>
+
+      <div>
+          <ul class="sidebar">
+          <li><a href="index.html">5 Maiores</a></li>
+          <li><a href="municipios.html">Municípios</a></li>
+          <li><a class="active" href="variacao.html">Variação Sazonal</a></li>
+          <li><a href="comparacao-municipios.html">Comparação de Municípios</a></li>
+          <li><a href="mapeamento.html">Mapeamento</a></li>
+          <li><a href="">Balança Comercial</a></li>
+        </ul>
+        </div>
+
+    <div class="flex-container2">
+      <!-- Box 1 -->
+      <div>
+        <h1>Média FOB 2019</h1>
+        <h2>R$ 4,31 Bi</h2>
+      </div>  
+      <div>
+        <h1>Média FOB 2020</h1>
+        <h2>R$ 3,92 Bi</h2>
+      </div>  
+      <div>
+        <h1>Média FOB 2021</h1>
+        <h2>R$ 4,78 Bi</h2>
+      </div>  
+      <div>
+        <h1>Média FOB 2022</h1>
+        <h2>R$ 6,21 Bi</h2>
+      </div>  
+      <div>
+        <h1>Média FOB 2023</h1>
+        <h2>R$ 6,32 Bi</h2>
+      </div>  
+      <div>
+        <h1>Média FOB 2024</h1>
+        <h2>R$ 6,32 Bi</h2>
+      </div>  
+    </div>
+
+      <div class="texto-variacao">
+          <h1>Análise de Variação Sazonal nas Exportações (2019–2024)</h1>
+          <p>Este gráfico representa a variação sazonal nas exportações do estado de São Paulo entre os anos de 2019 e 2024. A análise tem como objetivo identificar padrões recorrentes ao longo dos meses e anos, destacando períodos de maior ou menor atividade econômica no setor exportador. Esses padrões ajudam a entender como fatores como colheitas, demanda internacional, feriados e sazonalidade do mercado afetam os volumes exportados. A partir dessas informações, é possível obter insights valiosos para a tomada de decisões estratégicas em comércio exterior.</p>
       </div>
 
-      <script>
-        window.addEventListener("DOMContentLoaded", () => {
-          document.documentElement.classList.add("disable-transitions");
-      
-          const savedTheme = localStorage.getItem("theme");
-          if (savedTheme === "dark") {
-            document.body.classList.add("dark-mode");
-          }
-      
-          setTimeout(() => {
-            document.documentElement.classList.remove("disable-transitions");
-          }, 100);
-        });
-
-        function myFunction() {
-          const isDark = document.body.classList.toggle("dark-mode");
-          localStorage.setItem("theme", isDark ? "dark" : "light");
-        }
-      </script>
-    </div>
-    </nav>
-
-    <div>
-        <ul class="sidebar">
-         <li><a href="5maiores.html">5 Maiores</a></li>
-         <li><a href="municipios.html">Municípios</a></li>
-         <li><a href="variacao.html">Variação Sazonal</a></li>
-         <li><a href="exportacao.html">Exportação</a></li>
-         <li><a href="mapeamento.html">Mapeamento</a></li>
-         <li><a href="">Balança Comercial</a></li>
-       </ul>
-       </div>
-
-   <div class="flex-container2">
-    <!-- Box 1 -->
-    <div>
-      <h1>Média FOB 2019</h1>
-      <h2>R$ 4,31 Bi</h2>
-    </div>  
-    <div>
-      <h1>Média FOB 2020</h1>
-      <h2>R$ 3,92 Bi</h2>
-    </div>  
-    <div>
-      <h1>Média FOB 2021</h1>
-      <h2>R$ 4,78 Bi</h2>
-    </div>  
-    <div>
-      <h1>Média FOB 2022</h1>
-      <h2>R$ 6,21 Bi</h2>
-    </div>  
-    <div>
-      <h1>Média FOB 2023</h1>
-      <h2>R$ 6,32 Bi</h2>
-    </div>  
-    <div>
-      <h1>Média FOB 2024</h1>
-      <h2>R$ 6,32 Bi</h2>
-    </div>  
-  </div>
-
-    <div class="texto-variacao">
-        <h1>Análise de Variação Sazonal nas Exportações (2019–2024)</h1>
-        <h9>Este gráfico representa a variação sazonal nas exportações do estado de São Paulo entre os anos de 2019 e 2024. A análise tem como objetivo identificar padrões recorrentes ao longo dos meses e anos, destacando períodos de maior ou menor atividade econômica no setor exportador. Esses padrões ajudam a entender como fatores como colheitas, demanda internacional, feriados e sazonalidade do mercado afetam os volumes exportados. A partir dessas informações, é possível obter insights valiosos para a tomada de decisões estratégicas em comércio exterior.</h9>
-    </div>
-
-    <div class="container mt-5" style="margin-left: 200px;"> 
-      <img src="images/Gráfico Sazonal.png" alt="Gráfico Sazonal" class="graf-sazonal">
-    </div>
+      <div class="container mt-5" style="margin-left: 200px;"> 
+        <img src="./images/Gráfico Sazonal.png" alt="Gráfico Sazonal" class="graf-sazonal">
+      </div>
+  </main>
 </body>
 </html>
