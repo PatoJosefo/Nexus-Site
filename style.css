@@ -56,7 +56,7 @@ ul.sidebar {
 }
 
 .dark-mode ul.sidebar {
-  background-color: #1e1e1e;
+  background-color: #333333;
 }
 
 .button-search {
@@ -157,7 +157,7 @@ main {
 }
 
 .dark-mode .flex-container > div {
-  background-color: #2a2a2a;
+  background-color: #333333;
   color: #f1f1f1;
 }
 
@@ -191,7 +191,7 @@ main {
 }
 
 .dark-mode .flex-container2 > div {
-  background-color: #2a2a2a;
+  background-color: #333333;
   color: #f1f1f1;
 }
 
@@ -224,7 +224,7 @@ main {
 .dark-mode .dropdown .btn {
   background-color: #005eda;
   border-color: #005eda;
-  color: black;
+  color: white;
 }
 
 .dark-mode .dropdown-menu {
@@ -340,6 +340,7 @@ input.form-control {
 
 
 .texto-municipios {
+  font-size: 13px;
   text-align: center;
   margin-left: 50px;
   margin-right: 50px;
@@ -405,6 +406,7 @@ input.form-control {
 
 
 .texto-cincomaiores {
+font-size: 13px;
 text-align: center;
 margin-left: 50px;
 margin-right: 50px;
@@ -427,6 +429,7 @@ margin-top: 15px;
 
 
 .texto-variacao {
+font-size: 13px;
 text-align: center;
 margin: auto 50px auto 250px;
 }
@@ -459,6 +462,7 @@ margin: auto 50px auto 250px;
 
 
 .texto-comparacao {
+  font-size: 13px;
   text-align: center;
   margin-left: 50px;
   margin-right: 50px;
@@ -472,4 +476,86 @@ margin: auto 50px auto 250px;
 
 #comparacao-page .flex-container h2 {
   font-size: 1rem;
+}
+
+/* Estilo para o container do mapa */
+.map-container {
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Estilos para o botão de tema aprimorado */
+.theme-switcher {
+  position: relative;
+  width: 70px;
+  height: 34px;
+  border-radius: 50px;
+  background: var(--toggle-bg, #d6d6d6);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.theme-switcher:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .theme-switcher {
+  --toggle-bg: #333;
+}
+
+.theme-switcher-handle {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--toggle-handle, #fff);
+  transition: all 0.3s ease;
+  left: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .theme-switcher-handle {
+  left: calc(100% - 30px);
+  --toggle-handle: #fff;
+}
+
+.theme-icon {
+  width: 18px;
+  height: 18px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.sun-icon {
+  color: var(--sun-color, #ff9800);
+}
+
+.moon-icon {
+  color: var(--moon-color, #666);
+}
+
+.dark-mode .sun-icon {
+  --sun-color: #aaa;
+}
+
+.dark-mode .moon-icon {
+  --moon-color: #4b32bd;
 }
