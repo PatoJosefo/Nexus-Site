@@ -13,14 +13,14 @@
     <title>Nexus Site</title>
 </head>
 
-<body id="cinco-maiores-page"></body>
+<body id="comparacao-page"></body>
   <main>
 
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-gradient">
+      <nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-gradient">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#">
           <img src="./images/NEXUS.svg" alt="Nexus Logo" class="nexus-logo">
-        </a>      
+        </a>    
         <div class="d-flex ms-auto align-items-center gap-5">
           <form class="d-flex align-items-center">
             <div class="input-group rounded-input-group">
@@ -73,16 +73,15 @@
         </script>
         
       </div>
-    </nav>
-
+      </nav>
 
       <!-- Sidebar -->
       <div>
         <ul class="sidebar">
-        <li><a class="active" href="index.html">5 Maiores</a></li>
+        <li><a href="index.html">5 Maiores</a></li>
         <li><a href="municipios.html">Municípios</a></li>
         <li><a href="variacao.html">Variação Sazonal</a></li>
-        <li><a href="comparacao-municipios.html">Comparação de Municípios</a></li>
+        <li><a class="active" href="comparacao-municipios.html">Comparação de Municípios</a></li>
         <li><a href="mapeamento.html">Mapeamento</a></li>
         <li><a href="">Balança Comercial</a></li>
       </ul>
@@ -107,27 +106,17 @@
         
           <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              MÊS
+              MÉTRICA
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Janeiro</a></li>
-              <li><a class="dropdown-item" href="#">Fevereiro</a></li>
-              <li><a class="dropdown-item" href="#">Março</a></li>
-              <li><a class="dropdown-item" href="#">Abril</a></li>
-              <li><a class="dropdown-item" href="#">Maio</a></li>
-              <li><a class="dropdown-item" href="#">Junho</a></li>
-              <li><a class="dropdown-item" href="#">Julho</a></li>
-              <li><a class="dropdown-item" href="#">Agosto</a></li>
-              <li><a class="dropdown-item" href="#">Setembro</a></li>
-              <li><a class="dropdown-item" href="#">Outubro</a></li>
-              <li><a class="dropdown-item" href="#">Novembro</a></li>
-              <li><a class="dropdown-item" href="#">Dezembro</a></li>
+              <li><a class="dropdown-item" href="#">Valor Agregado</a></li>
+              <li><a class="dropdown-item" href="#">Kg. Líquido</a></li>
             </ul>
           </div>
         
           <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              MUNICÍPIO
+              MUNICÍPIOS
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">São José dos Campos</a></li>
@@ -144,15 +133,38 @@
           </div>
         </div>
 
+        <div class="flex-container">
+          <!-- Box 1 -->
+          <div>
+            <h1>Valor Exportações Gavião Peixoto</h1>
+            <h2>1750$</h2>
+          </div>
+          <div>
+            <h1>Valor Exportações Charqueada</h1>
+            <h2>375$</h2>
+          </div>
+          <div>
+            <h1>Valor Exportações Itanhaém</h1>
+            <h2>360$</h2>
+          </div>
+          <div>
+            <h1>Valor Exportações Cunha</h1>
+            <h2>225$</h2>
+          </div>
+          <div>
+            <h1>Valor Exportações Silveiras</h1>
+            <h2>125$</h2>
+          </div>
+        </div>
 
-      <div class="texto-cincomaiores">
-          <h3>Top 5 Exportações dos Municípios de São Paulo</h3>
-          <p>Este gráfico representa as 5 maiores exportações de cada município do Estado de São Paulo entre os anos de 2019 e 2024. A análise tem como objetivo apresentar os produtos exportados com maior frequência em cada município ao longo dos meses e anos. Os dados do gráfico nos ajudam a compreender melhor as exportações de cada município do estado de São Paulo, e como cada município se sobressai no mercado internacional. A partir dessas informações, é possível obter insights valiosos para a tomada de decisões estratégicas em comércio exterior.</p>
-      </div>
+        <div class="texto-comparacao">
+          <h3>Comparação de Municípios de São Paulo</h3>
+          <p>A partir deste gráfico é possível comparar as exportações de cada município do Estado de São Paulo entre os anos de 2019 e 2024. A análise tem como objetivo a comparação dos valores de exportação entre diversos municípios ao longo dos meses e anos. A partir dessas informações, é possível obter informações importantes acerca de cada município.</p>
+        </div>
 
-      <div class="container mt-5 custom-offset d-flex justify-content-center">
-        <img src="./images/5Maiores.png" alt="cinco-maiores-img" class="graf-cincomaiores">
-      </div>
+        <div class="container mt-5 custom-offset d-flex justify-content-center">
+          <img src="./images/Comparação.png" alt="comparacao-img" class="graf-comparacao">
+        </div>
 
         </div>
       </div>
